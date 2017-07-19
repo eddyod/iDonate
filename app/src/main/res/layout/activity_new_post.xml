@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donation.NewPostActivity">
+
+    <EditText
+        android:id="@+id/field_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Title"
+        android:maxLines="1" />
+
+    <Spinner
+        android:id="@+id/field_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/category_array"
+        android:layout_below="@+id/field_title" />
+
+    <EditText
+        android:id="@+id/field_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/field_category"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="Describe donation..."
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:scrollHorizontally="false" />
+
+    <LinearLayout
+        android:id="@+id/mLlayoutBottomButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/uploadPictureButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:id="@+id/uploadCameraButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/submitPostButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
